@@ -24,7 +24,13 @@ app.use((req, res) => {
     res.end("hello world\n");
 });
 
-app.listen(80);
+//http on port 80
+app.listen(80, ()=>{
+    console.log("http listener on port 80");
+});
 
-https.createServer(options, app).listen(443);
+//https on port 443
+https.createServer(options, app).listen(443,()=>{
+    console.log("https listener on port 443");
+});
 
